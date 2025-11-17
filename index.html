@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QualiOdonto</title>
+    <meta name="description" content="Clínica QualiOdonto em Brasília: harmonização facial, botox, preenchimentos e odontologia estética com padrão ouro em acolhimento e tecnologia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#00796B',
+                        royal: '#1E3A8A',
+                        charcoal: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    },
+                    boxShadow: {
+                        lux: '0 30px 80px -25px rgba(15, 23, 42, 0.55)'
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #F3F4F6;
+        }
+        /* Estilos de Animação */
+        [data-animate] {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        [data-animate="slide-left"] {
+            transform: translateX(-40px);
+        }
+        [data-animate="slide-right"] {
+            transform: translateX(40px);
+        }
+        [data-animate].animate-active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+        h1,
+        h2 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+        }
+        p {
+            line-height: 1.75;
+        }
+        /* Fundo da Seção Hero - AGORA COM O SEU GIF */
+        .hero-bg {
+            background-image: linear-gradient(135deg, rgba(15, 28, 63, 0.75), rgba(0, 121, 107, 0.8)), url('assets/images/Vídeo_Pronto_Para_Visualizar.gif');
+            background-size: cover;
+            background-position: center;
+        }
+        iframe {
+            border: 0;
+        }
+    </style>
+</head>
+<body class="text-charcoal font-sans leading-relaxed antialiased selection:bg-brand/10 selection:text-brand">
+    
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-white/70 shadow-lg">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3" aria-label="Logo QualiOdonto">
+                <img src="assets/images/logo.png" alt="Logo QualiOdonto" class="h-16 w-auto object-contain" />
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+                <a href="#hero" class="hover:text-brand transition">Início</a>
+                <a href="#autoridade" class="hover:text-brand transition">Autoridade</a>
+                <a href="#resultados" class="hover:text-brand transition">Resultados</a>
+                <a href="#contato" class="hover:text-brand transition">Contato</a>
+            </nav>
+            
+            <a href="https://api.whatsapp.com/send?phone=5561999349383" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-5 py-3 rounded-full shadow-md shadow-brand/40 hover:-translate-y-0.5 transition">
+                Agende sua Avaliação
+            </a>
+
+            <button id="menu-button" class="md:hidden p-2 text-brand" aria-label="Abrir Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 pb-4">
+            <nav class="flex flex-col gap-1 text-sm font-medium text-gray-600 px-6 pt-2">
+                <a href="#hero" class="hover:text-brand transition py-2 border-b border-gray-50/50">Início</a>
+                <a href="#autoridade" class="hover:text-brand transition py-2 border-b border-gray-50/50">Autoridade</a>
+                <a href="#resultados" class="hover:text-brand transition py-2 border-b border-gray-50/50">Resultados</a>
+                <a href="#contato" class="hover:text-brand transition py-2">Contato</a>
+                <a href="https://api.whatsapp.com/send?phone=5561999349383" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-brand text-white text-sm font-semibold px-5 py-3 mt-4 rounded-full shadow-md shadow-brand/40 transition">
+                    Agende sua Avaliação
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main class="pt-28">
+        <section id="hero" class="hero-bg text-white" data-animate="fade-up">
+            <div class="max-w-6xl mx-auto px-6 py-24 lg:py-32 flex flex-col lg:flex-row gap-14 items-center">
+                
+                <div class="space-y-6 lg:w-1/2" data-animate="fade-up">
+                    <p class="uppercase tracking-[0.4em] text-sm text-teal-100">Clínica Odontologica em Sobradinho 2</p>
+                    <h1 class="font-serif text-4xl md:text-5xl leading-tight">A arte de Transformar Sorrisos e a Estética Facial em Sobradinho 2.</h1>
+                    <p class="text-lg text-gray-100 max-w-xl">O Padrão Ouro em Harmonização Facial, Botox, Preenchimentos e Odontologia Estética com protocolos assinados e atendimento acolhedor.</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://api.whatsapp.com/send?phone=5561999349383" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-white text-brand font-semibold px-6 py-3 rounded-full shadow-lg shadow-black/20 hover:-translate-y-0.5 transition">
+                            Agende sua Avaliação
+                        </a>
+                    </div>
+                    
+                    <dl class="inline-flex flex-wrap gap-12 text-sm mx-auto">
+                        <div class="text-center">
+                            <dt class="text-xs uppercase tracking-widest text-gray-200">Experiência</dt>
+                            <dd class="text-2xl font-serif">15+ anos</dd>
+                        </div>
+                        
+                        <div class="text-center">
+                            <dt class="text-xs uppercase tracking-widest text-gray-200">Atendimento</dt>
+                            <dd class="text-2xl font-serif">Vip</dd>
+                        </div>
+                    </dl>
+                </div>
+                
+                <div class="bg-white/90 backdrop-blur rounded-[32px] p-8 shadow-lux text-charcoal space-y-6 lg:w-1/2" data-animate="slide-right">
+                    <p class="text-sm uppercase tracking-[0.3em] text-brand">O Padrão QualiOdonto</p>
+                    <p class="text-lg leading-relaxed">Protocolos autorais que unem odontologia estética, harmonização facial e tecnologia digital para resultados naturais, sofisticados e duradouros.</p>
+                    
+                    
+
+                    <a href="https://api.whatsapp.com/send?phone=5561999349383" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold px-6 py-3 rounded-full shadow-md shadow-brand/30">
+                        Consultar disponibilidade
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="autoridade" class="py-20" data-animate="fade-up">
+            <div class="max-w-6xl mx-auto px-6 space-y-10">
+                <div class="max-w-3xl space-y-4">
+                    <p class="text-brand uppercase tracking-[0.3em] text-sm">Autoridade & Diferenciais</p>
+                    <h2 class="font-serif text-4xl text-royal">O Padrão Ouro em Saúde e Estética.</h2>
+                    <p class="text-lg text-gray-600">
+                        Com uma equipe de cirurgiões-dentistas altamente qualificados e experientes, nossa clínica se destaca pela qualidade e arte de transformar sorrisos.
+                        Nosso objetivo é proporcionar a cada paciente uma experiência personalizada e confortável, visando sempre a saúde bucal e a satisfação estética.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <article class="bg-white rounded-[28px] p-6 border border-white shadow-lux" data-animate="slide-up">
+                        <div class="w-12 h-12 rounded-full bg-brand/10 text-brand grid place-items-center mb-4">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <circle cx="12" cy="8" r="3"></circle>
+                                <path d="M5 20c2.2-3 4.8-4.5 7-4.5s4.8 1.5 7 4.5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl mb-2">Harmonização Facial</h3>
+                        <p class="text-sm text-gray-500">Contornos equilibrados e suaves com foco absoluto na naturalidade.</p>
+                    </article>
+                    <article class="bg-white rounded-[28px] p-6 border border-white shadow-lux" data-animate="slide-up">
+                        <div class="w-12 h-12 rounded-full bg-brand/10 text-brand grid place-items-center mb-4">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M12 3l4.5 7.5a5.5 5.5 0 11-9 0L12 3z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl mb-2">Botox e Preenchimentos</h3>
+                        <p class="text-sm text-gray-500">Protocolos seguros para suavizar linhas e restaurar volume estratégico.</p>
+                    </article>
+                    <article class="bg-white rounded-[28px] p-6 border border-white shadow-lux" data-animate="slide-up">
+                        <div class="w-12 h-12 rounded-full bg-brand/10 text-brand grid place-items-center mb-4">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <circle cx="8" cy="9" r="3"></circle>
+                                <circle cx="16" cy="9" r="3"></circle>
+                                <path d="M3 20c0-3 2.5-5 5-5"></path>
+                                <path d="M21 20c0-3-2.5-5-5-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl mb-2">Equipe Qualificada</h3>
+                        <p class="text-sm text-gray-500">Cirurgiões-dentistas especialistas em estética facial e dental integrada.</p>
+                    </article>
+                    <article class="bg-white rounded-[28px] p-6 border border-white shadow-lux" data-animate="slide-up">
+                        <div class="w-12 h-12 rounded-full bg-brand/10 text-brand grid place-items-center mb-4">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <rect x="5" y="5" width="14" height="14" rx="2"></rect>
+                                <path d="M12 9v6"></path>
+                                <path d="M9 12h6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl mb-2">Tecnologia de Ponta</h3>
+                        <p class="text-sm text-gray-500">Biossegurança rigorosa, planejamento digital e ambientes inteligentes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white" id="resultados" data-animate="fade-up">
+            <div class="max-w-6xl mx-auto px-6 space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <p class="text-brand uppercase tracking-[0.3em] text-sm">Antes & Depois</p>
+                    <h2 class="font-serif text-4xl text-royal">Resultados que Inspiram Confiança.</h2>
+                    <p class="text-lg text-gray-600">Transformações reais com equilíbrio facial, expressões suaves e sorrisos harmônicos.</p>
+                </div>
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    
+                    <article class="bg-gray-50 rounded-[28px] p-6 shadow-lux border border-white space-y-4" data-animate="slide-up">
+                        <h3 class="font-serif text-2xl text-royal">Harmonização Facial</h3>
+                        <div class="flex justify-center gap-2 mb-4">
+                            <span class="inline-block text-sm font-semibold tracking-[0.3em] text-white bg-royal/90 px-4 py-1 rounded-full">ANTES</span>
+                            <span class="inline-block text-sm font-semibold tracking-[0.3em] text-white bg-brand px-4 py-1 rounded-full">DEPOIS</span>
+                        </div>
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-white/40 flex items-center justify-center">
+                            <img src="assets/images/imgi_13_clinica-qualiodonto-em-sobradinho-harmonizacao-fac-3448171-5374a.webp" alt="Antes e Depois da harmonização facial QualiOdonto" class="w-full h-full object-contain object-center" loading="lazy" data-animate="fade-in" />
+                        </div>
+                    </article>
+                    
+                    <article class="bg-gray-50 rounded-[28px] p-6 shadow-lux border border-white space-y-4" data-animate="slide-up">
+                        <h3 class="font-serif text-2xl text-royal">Botox</h3>
+                        <div class="flex justify-center gap-2 mb-4">
+                            <span class="inline-block text-sm font-semibold tracking-[0.3em] text-white bg-royal/90 px-4 py-1 rounded-full">ANTES</span>
+                            <span class="inline-block text-sm font-semibold tracking-[0.3em] text-white bg-brand px-4 py-1 rounded-full">DEPOIS</span>
+                        </div>
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-white/40 flex items-center justify-center">
+                            <img src="assets/images/imgi_2_clinica-qualiodonto-em-sobradinho-harmonizacao-fac-3448171-52301.webp" alt="Antes e Depois do botox QualiOdonto" class="w-full h-full object-contain object-center" loading="lazy" data-animate="fade-in" />
+                        </div>
+                    </article>
+                    
+                    <article class="bg-gray-50 rounded-[28px] p-6 shadow-lux border border-white space-y-4" data-animate="slide-up">
+                        <h3 class="font-serif text-2xl text-royal">Lentes de Contato/Sorriso</h3>
+                        <div class="flex justify-center gap-2 mb-4">
+                            <span class="inline-block text-sm font-semibold tracking-[0.3em] text-white bg-royal/90 px-4 py-1 rounded-full">ANTES</span>
+                            <span class="inline-block text-sm font-semibold tracking-[0.3em] text-white bg-brand px-4 py-1 rounded-full">DEPOIS</span>
+                        </div>
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-white/40 flex items-center justify-center">
+                            <img src="assets/images/imgi_3_clinica-qualiodonto-em-sobradinho-harmonizacao-fac-3448171-c653c.webp" alt="Antes e Depois das lentes de contato dental QualiOdonto" class="w-full h-full object-contain object-center" loading="lazy" data-animate="fade-in" />
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-20" data-animate="fade-up">
+            <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-stretch">
+                <div class="space-y-6">
+                    <p class="text-brand uppercase tracking-[0.3em] text-sm">Agende sua visita</p>
+                    <h2 class="font-serif text-4xl text-royal">Agende Sua Visita.</h2>
+                    <p class="text-lg text-gray-600">Endereço e horários exclusivos para um atendimento acolhedor e reservado.</p>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="p-6 bg-white rounded-[28px] shadow-lux border border-white" data-animate="slide-up">
+                            <h3 class="font-semibold text-brand mb-2">Endereço</h3>
+                            <p>AR 9 Conjunto 1, SN, Setor Oeste (Sobradinho II)<br />Brasília, DF.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-[28px] shadow-lux border border-white" data-animate="slide-up">
+                            <h3 class="font-semibold text-brand mb-2">Horários</h3>
+                            <p>Seg à Sex: 08:00 - 12:00 | 14:00 - 18:00</p>
+                            <p>Sábado: 08:00 - 12:00</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="bg-white rounded-[32px] p-4 shadow-lux border border-white" data-animate="slide-right">
+                    <div class="aspect-[4/3] w-full overflow-hidden rounded-[28px]">
+                        <iframe src="https://maps.app.goo.gl/B4hEVgtxpPmKwRxw8" class="w-full h-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da QualiOdonto"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-royal text-white py-10" data-animate="fade-up">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+                <p class="font-semibold text-lg">QualiOdonto • Brasília</p>
+                <p class="text-sm text-white/80">AR 9 Conjunto 1, SN, Setor Oeste (Sobradinho II)</p>
+                <p class="text-sm text-white/70">© <span id="year"></span> Todos os direitos reservados.</p>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5561999349383" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-white text-brand font-semibold px-6 py-3 rounded-full shadow-md shadow-black/20">
+                Agende pelo WhatsApp
+            </a>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-4 right-4 z-50" data-animate="slide-left">
+        <a href="https://api.whatsapp.com/send?phone=5561999349383" target="_blank" rel="noopener" aria-label="Contato WhatsApp QualiOdonto" class="inline-flex items-center justify-center rounded-full bg-[#128C7E] text-white p-3 sm:p-4 shadow-2xl shadow-[#128C7E]/40 hover:-translate-y-0.5 transition">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
+                <path d="M12.0004 2C6.48041 2 2.00041 6.48 2.00041 12C2.00041 14.39 2.82041 16.58 4.19041 18.32L3.00041 22L7.09041 20.91C8.75041 21.62 10.3504 22 12.0004 22C17.5204 22 22.0004 17.52 22.0004 12C22.0004 6.48 17.5204 2 12.0004 2ZM17.1504 16.64C16.8904 17.11 16.1404 17.54 15.6504 17.61C15.1704 17.67 14.4704 17.69 13.0604 17.3C11.6604 16.91 10.1604 16.22 8.92041 14.88C7.68041 13.53 7.02041 11.96 6.64041 10.51C6.26041 9.06 6.36041 8.29 6.60041 7.87C6.84041 7.45 7.20041 7.33 7.55041 7.33C7.86041 7.33 8.16041 7.33 8.35041 7.33C8.54041 7.33 8.81041 7.33 9.07041 7.91C9.33041 8.5 9.87041 9.77 9.87041 9.94C9.87041 10.11 9.77041 10.32 9.63041 10.51C9.49041 10.71 9.38041 10.82 9.22041 10.97C9.07041 11.12 8.92041 11.23 8.78041 11.39C8.64041 11.55 8.52041 11.69 8.65041 11.91C8.78041 12.13 9.20041 12.83 9.82041 13.38C10.6004 14.07 11.2004 14.46 11.6704 14.65C12.1504 14.84 12.5904 14.77 12.9104 14.7C13.2304 14.63 13.4404 14.53 13.6304 14.23C13.8204 13.93 14.2204 13.41 14.5404 13.73C14.8604 14.05 15.1304 14.49 15.3004 14.74C15.4704 14.99 15.7404 15.14 15.8904 15.25C16.0404 15.36 17.0704 15.82 17.2904 16.05C17.5104 16.28 17.5104 16.48 17.1504 16.64Z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Define o ano no rodapé
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Lógica para o Menu Hambúrguer (Mobile)
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica de animação
+        const observer = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-active');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.2
+            }
+        );
+
+        document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
