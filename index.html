@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QualiOdonto</title>
     <meta name="description" content="Clínica QualiOdonto em Brasília: harmonização facial, botox, preenchimentos e odontologia estética com padrão ouro em acolhimento e tecnologia." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,12 +20,15 @@
                         royal: '#1E3A8A',
                         charcoal: '#333333'
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
-                    },
                     boxShadow: {
                         lux: '0 30px 80px -25px rgba(15, 23, 42, 0.55)'
+                    },
+                    // ATUALIZANDO AS FONTES AQUI:
+                    fontFamily: {
+                        // Aplica Stack Sans Headline como fonte padrão (sans)
+                        sans: ['"Stack Sans Headline"', 'system-ui', 'sans-serif'],
+                        // Aplica Stack Sans Headline também para os títulos (serif)
+                        serif: ['"Stack Sans Headline"', 'serif'] 
                     }
                 }
             }
@@ -55,14 +60,15 @@
             opacity: 1;
             transform: translate(0, 0);
         }
+        /* ESTA REGRA FOI ATUALIZADA PARA GARANTIR A NOVA FONTE NOS TÍTULOS */
         h1,
         h2 {
-            font-family: 'Playfair Display', 'Times New Roman', serif;
+            font-family: 'Stack Sans Headline', 'Times New Roman', serif;
         }
         p {
             line-height: 1.75;
         }
-        /* Fundo da Seção Hero - AGORA COM O SEU GIF */
+        /* Fundo da Seção Hero - GIF/VIDEO */
         .hero-bg {
             background-image: linear-gradient(135deg, rgba(15, 28, 63, 0.75), rgba(0, 121, 107, 0.8)), url('assets/images/Vídeo_Pronto_Para_Visualizar.gif');
             background-size: cover;
@@ -74,6 +80,7 @@
     </style>
 </head>
 <body class="text-charcoal font-sans leading-relaxed antialiased selection:bg-brand/10 selection:text-brand">
+    
     
     <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-white/70 shadow-lg">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -157,7 +164,7 @@
         <section id="autoridade" class="py-20" data-animate="fade-up">
             <div class="max-w-6xl mx-auto px-6 space-y-10">
                 <div class="max-w-3xl space-y-4">
-                    <p class="text-brand uppercase tracking-[0.3em] text-sm">Autoridade & Diferenciais</p>
+                    <p class="text-brand uppercase tracking-[0.3em] text-sm">Autoridade e Diferenciais</p>
                     <h2 class="font-serif text-4xl text-royal">O Padrão Ouro em Saúde e Estética.</h2>
                     <p class="text-lg text-gray-600">
                         Com uma equipe de cirurgiões-dentistas altamente qualificados e experientes, nossa clínica se destaca pela qualidade e arte de transformar sorrisos.
@@ -214,7 +221,7 @@
         <section class="py-20 bg-white" id="resultados" data-animate="fade-up">
             <div class="max-w-6xl mx-auto px-6 space-y-12">
                 <div class="text-center max-w-3xl mx-auto space-y-4">
-                    <p class="text-brand uppercase tracking-[0.3em] text-sm">Antes & Depois</p>
+                    <p class="text-brand uppercase tracking-[0.3em] text-sm">Antes e Depois</p>
                     <h2 class="font-serif text-4xl text-royal">Resultados que Inspiram Confiança.</h2>
                     <p class="text-lg text-gray-600">Transformações reais com equilíbrio facial, expressões suaves e sorrisos harmônicos.</p>
                 </div>
